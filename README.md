@@ -15,7 +15,7 @@ This contract simulates a "Will" that automatically releases funds if the owner 
 
 ## 2. contracts/DIYCoin.sol
 
-An ERC-20 compliant token contract named **DoDoCoin** (`DODO`) that supports minting and burning.
+An self implementation of ERC-20 compliant token contract named **DoDoCoin** (`DODO`) that supports minting and burning.
 
 ### Features
 
@@ -23,3 +23,14 @@ An ERC-20 compliant token contract named **DoDoCoin** (`DODO`) that supports min
 - Owner-only `mint()` and `mintTo()` functions
 - Token holders can `burn()` their tokens
 - Includes metadata: `name`, `symbol`, `decimals`, and `totalSupply`
+
+## 2. contracts/DIYCoinErc.sol
+
+An ERC-20 compliant token contract named **DoDoCoin** (`DODO`) that supports minting.
+
+### Features
+
+- Implements ERC-20 standard using OpenZeppelin's library.
+- Owner-only `mintTo(address, amount)` function to mint new tokens.
+- Initial supply of `1,000,000,000` tokens minted to the contract deployer.
+- Uses OpenZeppelin’s `Ownable` to restrict minting access to the owner.
