@@ -24,7 +24,7 @@ An self implementation of ERC-20 compliant token contract named **DoDoCoin** (`D
 - Token holders can `burn()` their tokens
 - Includes metadata: `name`, `symbol`, `decimals`, and `totalSupply`
 
-## 2. contracts/DIYCoinErc.sol
+## 3. contracts/DIYCoinErc.sol
 
 An ERC-20 compliant token contract named **DoDoCoin** (`DODO`) that supports minting.
 
@@ -34,3 +34,19 @@ An ERC-20 compliant token contract named **DoDoCoin** (`DODO`) that supports min
 - Owner-only `mintTo(address, amount)` function to mint new tokens.
 - Initial supply of `1,000,000,000` tokens minted to the contract deployer.
 - Uses OpenZeppelin’s `Ownable` to restrict minting access to the owner.
+
+## 4. projects/Foundry/MyTokenERC20
+
+An ERC-20 token contract named **MyToken** (`MTK`) with minting support and Foundry tests.
+
+
+### Features
+
+
+- Implements the ERC-20 standard using OpenZeppelin’s `ERC20` implementation.
+- `mint(address to, uint256 amount)` function allows minting tokens to any address.
+- Includes Foundry tests covering:
+  - Minting to different addresses.
+  - Transfers between accounts.
+  - ERC-20 allowance and `transferFrom` behavior.
+  - Revert cases for insufficient allowances and balances.
